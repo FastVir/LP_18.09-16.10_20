@@ -18,4 +18,8 @@ if (number1 > number2)
 {
     Console.Write($"Max = {number1}; Min = {number2}");
 }
-else Console.Write($" Max = {number2}; Min = {number1}");
+else if (number1 < number2)
+{
+    Console.Write($" Max = {number2}; Min = {number1}");
+}
+else Console.Write($"Первое и второе число равны Max = {number1}");

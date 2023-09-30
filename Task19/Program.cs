@@ -2,20 +2,20 @@
 // 1. которая принимает на вход пятизначное число
 // 2. и проверяет, является ли оно палиндромом.
 
+using System.Diagnostics.CodeAnalysis;
+
 public class Answer
 {
     static bool IsPalindrome(int number)
     {
         string Number = Convert.ToString(number);
-        if (Number[0] == Number[4] && Number[1] == Number[3] && Number.Length == 5)
+        if (Number.Length != 5)
         {
-            return true;
-        }
-        if (Number[0] != Number[4] && Number[1] != Number[3] && Number.Length == 5)
-        {
+            Console.WriteLine("Число не пятизначное");
             return false;
-        }
-        else Console.WriteLine("Число не пятизначное");
+        };
+        return Number[0] == Number[4] && Number[1] == Number[3];
+        
     }
 
     // Не удаляйте и не меняйте метод Main! 
@@ -30,7 +30,7 @@ public class Answer
         else
         {
             // Здесь вы можете поменять значения для отправки кода на Выполнение
-            number = 234322;
+            number = 234345;
         }
 
         // Не удаляйте строки ниже

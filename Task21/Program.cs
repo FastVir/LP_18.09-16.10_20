@@ -5,7 +5,8 @@ public class Answer
 {
     private static double Length(int[] pointA, int[] pointB)
     { 
-        return Math.Sqrt((pointB[0] - pointA[0]) * (pointB[0] - pointA[0]) + (pointB[1] - pointA[1]) * (pointB[1] - pointA[1]) + (pointB[2] - pointA[2]) * (pointB[2] - pointA[2]));
+        return Math.Sqrt((pointB[0] - pointA[0]) * (pointB[0] - pointA[0]) + (pointB[1] - pointA[1]) 
+        * (pointB[1] - pointA[1]) + (pointB[2] - pointA[2]) * (pointB[2] - pointA[2]));
     }
 
     // Не удаляйте и не меняйте метод Main! 

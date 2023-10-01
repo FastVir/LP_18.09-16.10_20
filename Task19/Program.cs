@@ -15,7 +15,7 @@ public class Answer
             return false;
         };
         return Number[0] == Number[4] && Number[1] == Number[3];
-        
+
     }
 
     // Не удаляйте и не меняйте метод Main! 
@@ -30,7 +30,7 @@ public class Answer
         else
         {
             // Здесь вы можете поменять значения для отправки кода на Выполнение
-            number = 234345;
+            number = 12324;
         }
 
         // Не удаляйте строки ниже

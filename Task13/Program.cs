@@ -11,8 +11,8 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 if (number >= 100)
 {
-   string threeDigit = number.ToString(); // делаем преобразование числа в строку
-   
-   Console.Write(threeDigit[2]);
+   string threeDigit = number.ToString()[2]; // делаем преобразование числа в строку
+   int threeDigit = Convert.ToInt32(Console.);
+   Console.Write(threeDigit);
 }
 else Console.Write($"В введеном числе {number} меньше 3-х цифр");

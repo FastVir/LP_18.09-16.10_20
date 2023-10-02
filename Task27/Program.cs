@@ -6,4 +6,25 @@
 // 82 -> 10
 // 9012 -> 12
 
-// Решается делением на 10 и сумированием остатка от деления  
+using System.Globalization;
+
+int SumOfDigit(int num)
+{
+    int sum = 0;
+    // for (int i = num; i > 0; i = i /10)
+    // {
+    //     sum = sum + i % 10;
+    // }
+    while(num > 0)
+    {
+        sum = sum + num % 10;
+        num = num / 10;
+    }
+    return sum;
+}
+
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int Sum = SumOfDigit(number);
+Console.WriteLine($"Сумма цифр в  числе {number} равна {Sum}");

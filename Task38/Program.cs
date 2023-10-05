@@ -4,26 +4,93 @@
 
 // Методы которые помогут решить данную задачу
 
-double[] CreateArrayRndDouble(int size, int min, int max)
-{
-    double[] arr = new double[size];
-    Random rnd = new Random();
+// double[] CreateArrayRndDouble(int size, int min, int max)
+// {
+//     double[] arr = new double[size];
+//     Random rnd = new Random();
 
-    for (int i = 0; i < size; i++)
-    {
-        arr[i] = rnd.NextDouble() * (max - min) + min;
+//     for (int i = 0; i < size; i++)
+//     {
+//         arr[i] = rnd.NextDouble() * (max - min) + min;
+//     }
+
+//     return arr;
+// }
+
+// void PrintArrayDouble(double[] arr)
+// {
+//     //Console.Write("[");
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if(i < arr.Length - 1) Console.Write($"{arr[i]:F1}, ");
+//         else Console.Write($"{arr[i]:F1}");  // F1 это округление до одного исмвола после запятой
+//     }
+//     //Console.Write("]");
+// }
+
+
+using System;
+
+public class Answer
+{
+    public static double FindMax(double[] array)
+    {     // Введите свое решение ниже
+
+
+       
     }
 
-    return arr;
-}
+    public static double FindMin(double[] array)
+    {     // Введите свое решение ниже
 
-void PrintArrayDouble(double[] arr)
-{
-    //Console.Write("[");
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if(i < arr.Length - 1) Console.Write($"{arr[i]:F1}, ");
-        else Console.Write($"{arr[i]:F1}");  // F1 это округление до одного исмвола после запятой
+
+
     }
-    //Console.Write("]");
+
+    public static double CalcDifferenceBetweenMaxMin(double[] array)
+    {// Введите свое решение ниже
+
+
+
+    }
+
+    public static void PrintArray(double[] array)
+    {// Введите свое решение ниже
+
+
+    }
+ // Не удаляйте и не меняйте метод Main! 
+
+
+    public static void Main(string[] args)
+    {
+        double[] array;
+        if (args.Length == 0)
+        {
+            array = new double[] { 3, 7.4, 22.3, 2, 78 };
+        }
+        else
+        {
+            // Иначе, парсим аргументы в массив чисел
+            string[] argStrings = args[0].Split(", ");
+            array = new double[argStrings.Length];
+            for (int i = 0; i < argStrings.Length; i++)
+            {
+                if (double.TryParse(argStrings[i], out double number))
+                {
+                    array[i] = number;
+                }
+                else
+                {
+                    Console.WriteLine($"Ошибка при парсинге аргумента {argStrings[i]}.");
+                    return;
+                }
+            }
+        }
+
+        Console.WriteLine("Массив:");
+        PrintArray(array);
+        double diff = CalcDifferenceBetweenMaxMin(array);
+        Console.WriteLine($"Разность между максимальным и минимальным элементом = {diff:f2}");
+    }
 }

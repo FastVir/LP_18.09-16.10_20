@@ -9,26 +9,34 @@ public class Answer
 {
     public static int SumOddElements(int[] array)
     {
-// Введите свое решение ниже
-
-
+        int sum = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i % 2 == 1)
+            {
+            sum = sum + array[i];
+            }
+        }
+        return sum;
     }
 
     public static void PrintArray(int[] array)
     {
-         // Введите свое решение ниже
-
-
+        // Введите свое решение ниже
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i < array.Length - 1) Console.Write($"{array[i]}\t");
+            else Console.WriteLine($"{array[i]}\t");
+        }
     }
 
-
-// Не удаляйте и не меняйте метод Main! 
+    // Не удаляйте и не меняйте метод Main! 
     public static void Main(string[] args)
     {
         int[] array;
         if (args.Length == 0)
         {
-           // Здесь вы можете поменять значения для отправки кода на Выполнение
+            // Здесь вы можете поменять значения для отправки кода на Выполнение
             array = new int[] { 12, 64, 28, 93, 35, 47, 6, 72, 58, 21 };
         }
         else

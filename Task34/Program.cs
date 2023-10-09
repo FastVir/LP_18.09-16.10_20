@@ -9,21 +9,23 @@ public class Answer
 {
     public static int CountEvenElements(int[] array)
     { 
-    int count = 0;
-      for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] % 2 == 0 )
-            count++;
+    // Введите свое решение ниже
+        int count = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] % 2 == 0)
+                count++;
+        }
+        return count;
     }
-    return count;
-
-    }
-
+  
     public static void PrintArray(int[] array)
     {
-    // Введите свое решение ниже
-
-
+     for (int i = 0; i < array.Length; i++)
+        {
+            if (i < array.Length - 1) Console.Write($"{array[i]}\t");
+            else Console.WriteLine($"{array[i]}\t");
+        }
     }
 
 
@@ -53,10 +55,11 @@ public class Answer
                 }
             }
         }
-    }
-}
+
         // Не удаляйте строки ниже
         Console.WriteLine("Массив:");
         PrintArray(array);
         int evenCount = CountEvenElements(array);
         Console.WriteLine($"Количество четных элементов: {evenCount}");
+    }
+}

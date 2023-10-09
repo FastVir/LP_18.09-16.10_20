@@ -34,32 +34,49 @@ using System;
 public class Answer
 {
     public static double FindMax(double[] array)
-    {     // Введите свое решение ниже
-
-
-       
+    {
+        double max = array[0];
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] > max)
+            {
+                max = array[i];
+            }
+        }
+        return max;
     }
 
     public static double FindMin(double[] array)
     {     // Введите свое решение ниже
 
-
+        double min = array[0];
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] < min)
+            {
+                min = array[i];
+            }
+        }
+        return min;
 
     }
 
     public static double CalcDifferenceBetweenMaxMin(double[] array)
     {// Введите свое решение ниже
-
-
+    return FindMax(array) - FindMin(array);
 
     }
 
     public static void PrintArray(double[] array)
     {// Введите свое решение ниже
-
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i < array.Length - 1) Console.Write($"{array[i]}\t");
+            else Console.WriteLine($"{array[i]}\t");
+        }
 
     }
- // Не удаляйте и не меняйте метод Main! 
+    // Не удаляйте и не меняйте метод Main! 
 
 
     public static void Main(string[] args)
@@ -91,6 +108,6 @@ public class Answer
         Console.WriteLine("Массив:");
         PrintArray(array);
         double diff = CalcDifferenceBetweenMaxMin(array);
-        Console.WriteLine($"Разность между максимальным и минимальным элементом = {diff:f2}");
+        Console.WriteLine($"Разность между максимальным и минимальным элементом = {diff:f1}");
     }
 }

@@ -3,22 +3,15 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
-
-// int NumberInput(string message)
-// {
-//     Console.Write(message);
-//     string ReadInput = Console.ReadLine();
-//     int result = int.Parse(ReadInput);
-//     return result;
-
-// }
-
-
-
-
 int[] GenerateArray(int lenght)
 {
-    
+    int[] array = new int[lenght];
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"Введите {i + 1}-й элемент: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return array;
 }
 
 void PrintArray(int[] arr)
@@ -34,7 +27,7 @@ void PrintArray(int[] arr)
 
 int PositiveNumbersArray(int[] arr)
 {
-    count = 0;  //0, 7, 8, -2, -2 -> 2
+    int count = 0;  //0, 7, 8, -2, -2 -> 2
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] > 0)
@@ -45,11 +38,10 @@ int PositiveNumbersArray(int[] arr)
     return count;
 }
 
-
-
-Console.WriteLine("Введите длину массива:");
+Console.Write("Введите длину массива: ");
 int lenght = Convert.ToInt32(Console.ReadLine());
-
-int[] array = GenerateArray(5);
-PrintArray(array);
-
+int[] arr;
+arr = GenerateArray(lenght);
+PrintArray(arr);
+int summ = PositiveNumbersArray(arr);
+Console.WriteLine($"Количество чисел больше 0 -> {summ}");
